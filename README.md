@@ -48,7 +48,7 @@ $ poetry run uvicorn --workers 1 --host 0.0.0.0 --port 80 app.main:app
 $ poetry run pytest
 ```
 
-### Docker image
+### 1.7. Docker image
 
 ```bash
 # export requirements.txt
