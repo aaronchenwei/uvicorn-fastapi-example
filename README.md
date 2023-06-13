@@ -47,3 +47,16 @@ $ poetry run uvicorn --workers 1 --host 0.0.0.0 --port 80 app.main:app
 ```bash
 $ poetry run pytest
 ```
+
+### Docker image
+
+```bash
+# export requirements.txt
+$ poetry export --without-hashes --format=requirements.txt > requirements.txt
+
+# Build Docker image
+$ docker build -t aaronchenwei/uvicorn-fastapi-example .
+
+# Run Docker container
+$ docker run -d --name uvicorn-fastapi-example -p 80:80 aaronchenwei/uvicorn-fastapi-example 
+```
